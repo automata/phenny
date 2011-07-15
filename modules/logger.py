@@ -22,7 +22,7 @@ logger.priority = 'medium'
 def log(phenny, input):
     logfile = open(logdir + 'labmacambira.txt', 'a')
     line = input.group()
-    line = "[" + str(time.strftime("%H:%M:%S")) + "] " + "<" + str(input.nick) + "> " + line + "\n"
+    line = "[" + str(time.strftime("%d-%m-%y %H:%M:%S")) + "] " + "<" + str(input.nick) + "> " + line + "\n"
     logfile.write(line.encode("utf-8"))
     logfile.close()
 
